@@ -1,0 +1,169 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina AI | Inclusive Communication Auditor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #0066ff;
+            --secondary: #f8f9fa;
+            --danger: #ff4d4f;
+            --success: #52c41a;
+            --border: #e8e8e8;
+        }
+
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+        
+        body { 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            margin: 0; 
+            background: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav { 
+            padding: 40px 10%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .logo { font-weight: 800; font-size: 24px; letter-spacing: -1.5px; }
+        .contact { font-size: 14px; font-weight: 600; color: #666; }
+
+        /* Hero Section */
+        .hero { padding: 80px 10% 40px; max-width: 900px; }
+        h1 { font-size: 64px; font-weight: 800; line-height: 1.05; margin-bottom: 24px; letter-spacing: -3px; }
+        p.subtitle { font-size: 22px; color: #666; margin-bottom: 40px; max-width: 600px; }
+
+        /* Mockup Container */
+        .app-container { 
+            background: var(--secondary); 
+            border-radius: 32px; 
+            padding: 60px 10%; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .card { 
+            background: white; 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .label { 
+            font-size: 11px; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            margin-bottom: 20px; 
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .label-red { background: #fff1f0; color: var(--danger); }
+        .label-blue { background: #e6f7ff; color: var(--accent); }
+
+        .content { font-size: 18px; font-weight: 400; color: #333; }
+        
+        /* 交互细节：偏见检测虚线 */
+        .biased { 
+            border-bottom: 2px dotted var(--danger); 
+            cursor: help; 
+            padding-bottom: 2px;
+        }
+        .highlight { color: var(--accent); font-weight: 600; }
+
+        /* Tech Specs Section */
+        .specs { 
+            padding: 0 10% 100px; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 40px; 
+        }
+        .spec-item h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+        .spec-item p { font-size: 14px; color: #777; margin: 0; }
+
+        .btn-main {
+            background: var(--text);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-main:hover { background: var(--accent); transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 40px; }
+            .hero { padding: 40px 10%; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LUMINA.AI</div>
+        <div class="contact">Iris He / Product & Localization</div>
+    </nav>
+
+    <section class="hero">
+        <h1>Eliminate Bias.<br>Empower Global Voice.</h1>
+        <p class="subtitle">An AIGC-driven auditor designed for cross-cultural alignment and high-professionalism inclusive communication.</p >
+        <a href=" " class="btn-main">View Product Documentation</a >
+    </section>
+
+    <section class="app-container">
+        <div class="card">
+            <div>
+                <span class="label label-red">Detected Bias / Weak Tone</span>
+                <p class="content">"I'm <span class="biased" title="Apologetic Tone: Reduces authority">sorry</span>, but <span class="biased" title="Gender Bias: Avoid gendered pronouns for general roles">he</span> might not be happy with this. Can we just do what he said?"</p >
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <span class="label label-blue">Lumina AI Optimization</span>
+                <p class="content">"Based on the current <span class="highlight">Risk Assessment</span>, I recommend we align the strategy with the <span class="highlight">Stakeholder’s</span> latest feedback to ensure <span class="highlight">ROI</span>."</p >
+            </div>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="spec-item">
+            <h3>Semantic Engine</h3>
+            <p>Leveraging Gemini-1.5-Pro for deep-layer contextual auditing and nuanced bias detection.</p >
+        </div>
+        <div class="spec-item">
+            <h3>D&I Compliance</h3>
+            <p>Mapped against Global MNC Diversity & Inclusion standards and HBR communication frameworks.</p >
+        </div>
+        <div class="spec-item">
+            <h3>Operational Focus</h3>
+            <p>Translating linguistic soft-power into measurable business impact and team efficiency.</p >
+        </div>
+    </section>
+</body>
+</html>
